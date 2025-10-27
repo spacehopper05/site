@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Фотограф Милла Борисова</title>
+  <!-- Минималистичный стиль -->
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <!-- Минималистичный логотип SVG: фотоаппарат + MB -->
+  <header>
+    <div class="logo" tabindex="0" aria-label="Логотип фотографа Милла Борисова">
+      <svg width="60" height="36" viewBox="0 0 60 36">
+        <!-- Корпус фотоаппарата -->
+        <rect x="10" y="8" rx="5" ry="5" width="40" height="20" fill="#dbe2e8" stroke="#3b4d63" stroke-width="2"/>
+        <!-- Линза -->
+        <circle cx="30" cy="18" r="7" fill="#a3b4c7" stroke="#3b4d63" stroke-width="2"/>
+        <!-- "MB" над линзой -->
+        <text x="22" y="16" font-size="8" fill="#3b4d63" font-family="Arial" font-weight="bold">MB</text>
+      </svg>
+    </div>
+    <nav>
+      <ul>
+        <li><button onclick="showSection('home')">Главная</button></li>
+        <li><button onclick="showSection('family')">Семейное фото</button></li>
+        <li><button onclick="showSection('love')">Love story</button></li>
+        <li><button onclick="showSection('wedding')">Свадебное фото</button></li>
+        <li><button onclick="showSection('individual')">Индивидуальное</button></li>
+        <li><button onclick="showSection('about')">О фотографе</button></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="home" class="active">
+      <h1>Фотограф Милла Борисова</h1>
+      <p>Профессиональная фотосъёмка для тех, кто ценит стиль и моменты.</p>
+      <button class="go-portfolio" onclick="showSection('family')">Портфолио</button>
+    </section>
+
+    <section id="family">
+      <h2>Семейное фото</h2>
+      <p>Теплые моменты семьи — минималистично.</p>
+      <!-- Фото-заглушки Unsplash -->
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=512&q=80" alt="Семья 1"/>
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=512&q=80" alt="Семья 2"/>
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=512&q=80" alt="Семья 3"/>
+      </div>
+    </section>
+
+    <section id="love">
+      <h2>Love story</h2>
+      <p>Искренние истории чувств — просто и стильно.</p>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=512&q=80" alt="Love 1"/>
+        <img src="https://images.unsplash.com/photo-1455656678494-4d1c4abab4d9?w=512&q=80" alt="Love 2"/>
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=512&q=80" alt="Love 3"/>
+      </div>
+    </section>
+
+    <section id="wedding">
+      <h2>Свадебное фото</h2>
+      <p>Сдержанная классика свадебных воспоминаний.</p>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1530023367847-6ddc2f48b7b4?w=512&q=80" alt="Свадьба 1"/>
+        <img src="https://images.unsplash.com/photo-1469371670801-0130552cadc3?w=512&q=80" alt="Свадьба 2"/>
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=512&q=80" alt="Свадьба 3"/>
+      </div>
+    </section>
+
+    <section id="individual">
+      <h2>Индивидуальное фото</h2>
+      <p>Лаконичные портреты для каждого.</p>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1519340333755-c3c1b5e8e7c9?w=512&q=80" alt="Портрет 1"/>
+        <img src="https://images.unsplash.com/photo-1515674441487-8162433e7f93?w=512&q=80" alt="Портрет 2"/>
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=512&q=80" alt="Портрет 3"/>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>О фотографе</h2>
+      <p>Милла Борисова. Снимаю просто и со вкусом. Люблю находить красоту в каждом человеке.</p>
+      <div class="timeline">
+        <div class="event">
+          <span class="dot"></span>
+          <div class="content">
+            <h3>Начало</h3>
+            <p>Увлечённость фотографией пришла поздно, но стала делом жизни.</p>
+          </div>
+        </div>
+        <div class="event">
+          <span class="dot"></span>
+          <div class="content">
+            <h3>Работа с клиентами</h3>
+            <p>Сотни семей, пар, индивидуальных историй сняты со вкусом и душой.</p>
+          </div>
+        </div>
+        <div class="event">
+          <span class="dot"></span>
+          <div class="content">
+            <h3>Сегодня</h3>
+            <p>Создаю минималистичные фотографии в холодных тонах.</p>
+          </div>
+        </div>
+      </div>
+      <h3>Контакты</h3>
+      <div class="contacts">
+        <span>Телефон: +7 (999) 123-45-67</span>
+        <span>Email: milla@mail.ru</span>
+        <span>Telegram: @millaborisova</span>
+        <span>WhatsApp: +7 (999) 123-45-67</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-links">
+      <!-- SVG-иконки соцсетей: скачайте с Flaticon/SVGRepo на свой вкус -->
+      <a href="https://vk.com/" target="_blank"><img src="vk.svg" class="social-icon"></a>
+      <a href="https://instagram.com/" target="_blank"><img src="instagram.svg" class="social-icon"></a>
+      <a href="https://t.me/" target="_blank"><img src="telegram.svg" class="social-icon"></a>
+      <a href="https://facebook.com/" target="_blank"><img src="facebook.svg" class="social-icon"></a>
+      <a href="https://whatsapp.com/" target="_blank"><img src="whatsapp.svg" class="social-icon"></a>
+      <a href="https://youtube.com/" target="_blank"><img src="youtube.svg" class="social-icon"></a>
+    </div>
+    <p>© 2025 Милла Борисова</p>
+  </footer>
+</body>
+</html>
