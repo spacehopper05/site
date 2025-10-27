@@ -4,6 +4,8 @@ body {
   font-family: "Roboto", Arial, sans-serif;
   color: #2c3844;
 }
+
+/* ------ Хедер ------ */
 header {
   background: #f4f7fb;
   display: flex;
@@ -15,6 +17,8 @@ header {
 .logo svg {
   vertical-align: middle;
   transition: transform 0.4s;
+  width: 48px;
+  height: 29px;
 }
 .logo:focus svg, .logo:hover svg {
   transform: scale(1.07);
@@ -93,6 +97,7 @@ button.go-portfolio:hover {
   transform: scale(1.08);
 }
 
+/* ------ Галерея ------ */
 .gallery {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -109,6 +114,7 @@ button.go-portfolio:hover {
   transform: scale(1.04);
 }
 
+/* ---- Таймлайн ---- */
 .timeline {
   border-left: 2px solid #5a7fa6;
   padding-left: 17px;
@@ -141,6 +147,7 @@ button.go-portfolio:hover {
   font-size: 1em;
 }
 
+/* ---- Футер ---- */
 footer {
   background: #dbe2e8;
   color: #406682;
@@ -161,4 +168,59 @@ footer {
 }
 .social-links a:hover .social-icon {
   transform: scale(1.15);
+}
+
+/* ------ Адаптивные стили для мобильных устройств ------ */
+@media (max-width: 650px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+  }
+  .logo {
+    margin-bottom: 9px;
+  }
+  main {
+    padding: 16px 0 3px;
+    max-width: 98vw;
+  }
+  main h1 {
+    font-size: 1.3em;
+    margin-top: 14px;
+  }
+  main h2 {
+    font-size: 1.1em;
+    margin-top: 9px;
+  }
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .contacts {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.98em;
+  }
+  .timeline {
+    padding-left: 10px;
+    margin: 13px 0;
+  }
+  .event h3 {
+    font-size: 1em;
+  }
+  .social-links {
+    margin-bottom: 7px;
+  }
+  .social-icon {
+    width: 26px; height: 26px;
+  }
+  button.go-portfolio {
+    font-size: 0.92em;
+    padding: 8px 16px;
+  }
 }
